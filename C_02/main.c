@@ -22,7 +22,9 @@
 #include "ex07/ft_strupcase.c"
 #include "ex08/ft_strlowcase.c"
 #include "ex09/ft_strcapitalize.c"
-
+#include "ex10/ft_strlcpy.c"
+#include "ex11/ft_putstr_non_printable.c"
+#include "ex12/ft_print_memory.c"
 
 int	main()
 {
@@ -105,4 +107,19 @@ int	main()
 	char sentence[] = "a VERY interesting SeNtEncE-isn't it, 42ers! yES,indeed";
 	printf("original: %s", sentence);
 	printf("\ncapitalised: %s\n", ft_strcapitalize(sentence));
+
+	// 10
+	printf("\n\nEx10\n");
+	char	source2[] = "World";
+	char	destination2[] = "0123456789";
+	printf("Source: %s\nDestination: %s\n", source2, ft_strlcpy(destination2, source2, 5));
+
+	// 11
+	printf("\n\nEx11\n");
+	char *nonprintable = "newline\n tabulator\t vertical tab\v"
+	ft_putstr_non_printable(nonprintable);
+
+	// 12
+	printf("\n\nEx12\n");
+	ft_print_memory();
 }
