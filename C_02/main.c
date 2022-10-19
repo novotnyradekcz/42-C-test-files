@@ -36,9 +36,9 @@ int	main()
 	
 	// 01
 	printf("\n\nEx01\n");
-	char	source2[] = "World";
-	char	destination2[] = "0123456789";
-	printf("Source: %s\nDestination: %s\n", source2, ft_strncpy(destination2, source2, 8));
+	char	source2[] = "Hello";
+	char	destination2[] = "World";
+	printf("Source: %s\nDestination: %s\n", source2, ft_strncpy(destination2, source2, 2));
 	// ft_strncpy(destination2, source2, 8);
 	// write(1, "Source: ", 9);
 	// write(1, source2, 6);
@@ -112,11 +112,11 @@ int	main()
 	printf("\n\nEx10\n");
 	char	source2[] = "World";
 	char	destination2[] = "0123456789";
-	printf("Source: %s\nDestination: %s\n", source2, ft_strlcpy(destination2, source2, 5));
+	printf("Source: %s\nDestination: %s\n Length: %u\n", source2, destination2, ft_strlcpy(destination2, source2, 5));
 
 	// 11
 	printf("\n\nEx11\n");
-	char *nonprintable = "newline\n tabulator\t vertical tab\v"
+	char *nonprintable = "newline\n tabulator\t vertical tab\v";
 	ft_putstr_non_printable(nonprintable);
 
 	// 12
