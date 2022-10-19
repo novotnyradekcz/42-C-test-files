@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+// #include <string.h>
 #include "ex00/ft_strcmp.c"
 #include "ex01/ft_strncmp.c"
 #include "ex02/ft_strcat.c"
@@ -75,7 +76,7 @@ int	main()
 
     // ex05
 	printf("\nex05\n");
-    char destination3[12];
+    char destination3[8];
     destination3[0] = 'H';
     destination3[1] = 'e';
     destination3[2] = 'l';
@@ -83,6 +84,14 @@ int	main()
     destination3[4] = 'o';
     destination3[5] = '\0';
     char *source3 = " World";
-    printf("Can I append of \'%s\' to \'%s\' (size 8)?", source3, destination3);
-    printf(" \'%s\', size %d\n", destination3, ft_strlcat(destination3, source3, 8));
+    // char destination4[8];
+    // destination4[0] = 'H';
+    // destination4[1] = 'e';
+    // destination4[2] = 'l';
+    // destination4[3] = 'l';
+    // destination4[4] = 'o';
+    // destination4[5] = '\0';
+    printf("Can I append of \'%s\' to \'%s\' (size 8)?\n", source3, destination3);
+    printf("My function: \'%s\', length %d\n", destination3, ft_strlcat(destination3, source3, 8));
+    // printf("strlcat: \'%s\', size %d\n", destination4, strlcat(destination4, source3, 8));
 }
