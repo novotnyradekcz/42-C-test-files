@@ -110,9 +110,9 @@ int	main()
 
 	// 10
 	printf("\n\nEx10\n");
-	char	source2[] = "World";
-	char	destination2[] = "0123456789";
-	printf("Source: %s\nDestination: %s\n Length: %u\n", source2, destination2, ft_strlcpy(destination2, source2, 5));
+	char	source3[] = "World";
+	char	destination3[] = "0123456789";
+	printf("Source: %s\nDestination: %s\n Length: %u\n", source3, destination3, ft_strlcpy(destination3, source3, 5));
 
 	// 11
 	printf("\n\nEx11\n");
