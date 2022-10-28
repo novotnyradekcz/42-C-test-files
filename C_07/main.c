@@ -17,6 +17,7 @@
 #include "ex02/ft_ultimate_range.c"
 #include "ex03/ft_strjoin.c"
 #include "ex04/ft_convert_base.c"
+#include "ex05/ft_split.c"
 
 int	main()
 {
@@ -29,8 +30,8 @@ int	main()
 
 	// ex01
 	printf("\n\nex01\n");
-	int min = -214;
-	int max = -1;
+	int min = 214;
+	int max = -250;
 	printf("Range from %d to %d: ", min, max);
 	int *range1 = ft_range(min, max);
 	int	i;
@@ -54,19 +55,19 @@ int	main()
 	printf("\n\nex03\n");
 	int size = 4;
 	char *strings[] = {
-		" ",
-		" ",
-		" ",
-		" "
+		"Hello",
+		"how",
+		"are",
+		"you"
 	};
-	char *sep = "a";
+	char *sep = " ";
 	i = 0;
 	printf("Concatenate this:\n");
 	for (i=0; i<size; i++)
 		printf("%s\n", strings[i]);
 	char *rescat = ft_strjoin(size, strings, sep);
 	printf("Concatenated: %s\n", rescat);
-	free(rescat);
+	// free(rescat);
 	
 	// ex04
 	printf("\nex04\n");
@@ -76,8 +77,19 @@ int	main()
 	printf("Converting %s from base %s to base %s: \n", num, base_from, base_to);
 	char *result = ft_convert_base(num, base_from,base_to);
 	printf("%s\n", result);
-	// free(result);
+	free(result);
 
 	// ex05
 	printf("\nex05\n");
+	char *longstr = "abcd145sdf4s4s5fsdf444";
+	char *sep2 = "0123456789";
+	printf("Original: %s\nSeparators: %s\nSplit up:\n", longstr, sep2);
+	char **split = ft_split(longstr, sep2);
+	i = 0;
+	while (split[i] != 0)
+	{
+		printf("%s\n", split[i]);
+		i++;
+	}
+	free(split);
 }
